@@ -1,13 +1,18 @@
 #  Incident Dashboard
 
+A open board where every person with access to it can see, add, update or delete 
+incident. This project is thought to be a module of an incident management application.  
+ 
+A Spring boot microservice using Thymeleaf as template engine and MariaDB.
+
 ## Getting Started
 ### Prerequisites
 * Maven
 * MariaDB
 
-### Quickstart
+### Quick Start
 
-1. Download the source code: `git clone https://github.com/hugotiburtino/incident-dashboard`.
+1. Get the source code, v.g. `git clone https://github.com/hugotiburtino/incident-dashboard`.
 
 2. Open its folder as Maven project at your IDE.
 3. Change the name and password of the MariaDB user at *src/main/resources/application.properties*. For example:
@@ -25,11 +30,12 @@ spring.datasource.password=changeme
 * Hibernate
 * MariaDB
 * Maven
+* Bootstrap 4
 
 ## Authors
 * **Hugo B. Tiburtino**
 
 ## Acknowledgments
-* This project used as starter code the code of the project DIKUKA that **Hugo Tiburtino**
-  **Georg Kromer** and **Gergely Szalay** programmed at a Java bootcamp at AW Academy. 
-  Special thanks to the teacher Oliver Hock.
+This project used as starter code the project DIKUKA that **Georg Kromer**, **Gergely Szalay** 
+and Hugo Tiburtino programmed in a Java bootcamp at AW Academy. 
+Special thanks to the teacher Oliver Hock.
