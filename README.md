@@ -10,7 +10,7 @@ A Spring boot microservice using Thymeleaf as template engine and MariaDB.
 * Maven
 * MariaDB
 
-### Quick Start
+### Using IDE 
 
 1. Get the source code, v.g. `git clone https://github.com/hugotiburtino/incident-dashboard`.
 
@@ -20,7 +20,18 @@ A Spring boot microservice using Thymeleaf as template engine and MariaDB.
 spring.datasource.username=root
 spring.datasource.password=changeme
 ```
-4. Run the project as Java Application.
+4. Run the project as Java Application. Open the browser at localhost:8080
+
+
+### Using Terminal
+1. `git clone https://github.com/hugotiburtino/incident-dashboard`
+2. `cd incident-dashboard`
+3. `mvn clean`
+4. `nano src/main/resources/application.properties` and change the name and
+password of the MariaDB user to match the 
+4. `mvn compile`
+5. `mvn package`
+6. java -jar target/incidentdashboard.jar
 
 
 ## Built with
