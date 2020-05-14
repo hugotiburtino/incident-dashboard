@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="head"></head>
+  <body>
+	<div th:replace="appheader"></div>
+	<div th:replace="navbar"></div>
+	<!-- Title of the table -->
+	<div class="centering-container">
+		<h2 class="d-flex justify-content-center" th:text="#{title.index}"></h2>
+	</div>
+	<!-- Overview of the all incidents -->
+	<div class="table-responsive mx-auto incident_box" style="margin-bottom: 2rem">
+		<table class="table table-borderless table-hover ">
+			<thead class="">
+			<tr>
+				<th scope="col"></th>
+				<th th:text="#{title.label}" scope="col">Title</th>
+				<th th:text="#{description.label}" scope="col">Description</th>
+				<th th:text="#{timestamp.label}" scope="col">Opened at:</th>
+				<th th:text="#{location.label}" scope="col">Location</th>
+				<th th:text="#{contact.label}" scope="col">Contact</th>
+			</tr>
+			<tr th:each="incident : ${incidents}">
+				<td><a th:text="#{see.table}" 
+				  th:href="@{/incident/{id}(id=${incident.id})}">See</a></td>
+				<td th:text="${incident.shortDescription}"></td>
+				<td th:text="${incident.description}"></td>
+				<td th:text="${incident.timestamp}"></td>
+				<td th:text="${incident.location}"></td>
+				<td th:text="${incident.contact}"></td>
+				<td th:text="${incident.id}"></td>
+			</tr>
+		</table>
+	</div>
+	<h2 th:text="#{newincident.header}"
+	  class="text-uppercase d-flex justify-content-center">New Incident</h2>
+	<!-- Container of create new incident box -->
+	<div class="mx-auto incident_box w-75" style="margin-bottom: 2rem">
+		<!-- Form to create and save a new incident -->
+		<form id="create_new_incident" th:action="@{/saveNewIncident}" 
+		  th:object="${newIncident}" method="POST">
+		  <div class="form-group row">
+				<label th:text="#{title.label}" for="title" 
+				  class="control-label col-sm-4">Title</label>
+			<div class="col">
+				<input type="text"  id="title" 
+				  class="form-control" th:field="*{shortDescription}"/> 
+			</div>
+		  </div>
+		  <div class="form-group row">	
+			<label th:text="#{description.label}" for="longerDescription" 
+				  class="control-label col-sm-4">Longer Description</label>
+			<div class="col">
+			<textarea id="longerDescription" class="form-control" 
+				th:field="*{description}" /></textarea>
+		  	</div>
+		  </div>	
+		  <div class="form-group row">		
+			<label th:text="#{contact.label}" for="contact"
+				   class="control-label col-sm-4">Contact</label>
+			<div class="col">
+			<input type="text" id="contact" class="form-control" th:field="*{contact}"/> 
+					</div>
+		  </div>	
+		  <div class="form-group row">	
+			<label th:text="#{location.label}" for="location"
+				   class="control-label col-sm-4">Location</label>
+			<div class="col">
+			<input type="text" id="location" class="form-control" th:field="*{location}"/> 
+			</div>
+		  </div>
+		  <div class="action-icon-container">	
+		  	<input type="submit" class="btn btn-success" 
+		  	  role="button" th:value="#{report.submit.button}" />
+		  </div>
+		</form>
+	</div>
+  </body>
+</html>

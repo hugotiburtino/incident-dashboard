@@ -1,0 +1,235 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F5F5F5;
+}
+
+/*
+ div {
+	border: 1px solid black;
+}
+
+label {
+	border: 1px solid green;
+}
+
+h2 {
+	border: 1px solid red;
+
+}
+*/
+
+a, a:hover {
+	text-decoration:none;
+}
+
+h1 a {
+	color: #047364;
+}
+
+h1 a:hover {
+	color: #394B58;
+}
+
+h1 img {
+	margin-right: 1rem;
+}
+
+h1 {
+	background-color: white;
+	margin-bottom: 0;
+	padding: 1.5rem;
+}
+
+.topnav::before{
+	background-color: white;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #047364;
+ }
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #394B58;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #1f6650 ;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+  border-radius:25px;
+  
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  border-radius: 15px 0 0 15px;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+}
+
+@media all and (min-width: 960px) {
+    body{
+        font-size: 18px;
+    }
+}
+ 
+h2 {
+	padding: 1.5rem;
+}
+
+ @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+  .form-group{
+      width: 100%;
+      text-align: left;
+      margin-right:10px;
+      margin-left:10px;
+  }
+  .group-label{
+      width: 35%;
+      display:inline-block;
+  }
+  .group-input {
+      width: 45%;
+      display:inline-block;
+  }
+  
+  .group-submit{
+      width: 15%;
+      text-align: center;
+  }
+
+.incident_box {
+	border: 1px solid green;
+	border-radius: 25px;
+	padding: 5px;
+}
+
+.incident_box .row {
+	margin: 5px;
+}
+
+.action-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-icon {
+	font-size:1.5rem;
+	margin: 1rem;
+	color: #047364;
+}
+
+.action-icon:hover {
+	font-size:2rem;
+	margin: 0.62rem;
+	color: #047364;
+}
+
+.action-icon-container input {
+	margin: 10px;
+}
+
+
+@media screen and (max-width: 700px) {
+h1 {
+  font-size: 250% !important;
+}
+
+h2 {
+   font-size: 170% !important;
+   font-weight: bold;
+}
+
+body {
+ 	font-size: 150%;
+}
+  
+input[type=text] {
+  height: 80px;
+  font-size: 150% !important;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.btn {
+  font-size: 150% !important;
+}
+
+select, textarea {
+  font-size: 150% !important;
+  text-align: center;
+}
+
+.table td {
+   font-size: 150% !important;
+}
+
+.table th {
+  font-size: 150% !important;
+}
+
+.fa, .fa-search {
+   font-size: 130% !important;
+}
+
+.fa-edit::before, .fa-trash::before {
+   font-size: 250% !important;
+}
+
+.centering-container {
+  text-align: center !important;
+}
+ .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+    border-radius: 15px;
+    font-size: 150% !important;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+.topnav .search-container button {
+	background-color: #0FF;
+	}
+
+}
+

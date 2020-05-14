@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="head"></head>
+  <body>
+	<header>
+		<!-- App name and icon -->
+		<div th:replace="appheader"></div>
+		<!--  Nav bar  -->
+		<div th:replace="navbar"></div>
+	</header>
+	<!-- Title of the page -->
+	<h2 class="text-uppercase d-flex justify-content-center" 
+	  th:text="#{edit.incident.header}">Edit incident</h2>
+	<!-- Container of the box with data of incident -->
+	<div class="mx-auto incident_box w-75">
+		<!-- Form to edit incident -->
+		<form th:replace="editIncidentForm">
+		</form>
+	</div>
+	<!-- Delete button, that leads to a confirm modal -->
+	<div class="action-icon-container">
+		<button type="button" class="action-icon btn fa fa-trash" 
+				data-toggle="modal" data-target="#confirmDeleteModal"></button>
+	</div>
+	<!-- Modal to confirm that the report should be deleted -->
+	<div th:replace="deletemodal"></div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="head">
+	</head>
+	<body>
+		<header>
+			<!-- App name -->
+			<div th:replace="appheader"></div>
+			<!--  Nav bar  -->
+			<div th:replace="navbar"></div>
+		</header>
+		<!-- Title of the page -->
+		<h2 class="text-uppercase d-flex justify-content-center" 
+		  th:text="#{incident.page.header}">Incident</h2>
+		<!-- Edit button -->
+		<div class="action-icon-container">
+			<a class="action-icon fa fa-edit btn"
+			   role="button"
+			   th:href="@{/incident/edit/{id}(id=${incident.id})}">
+			</a>
+		</div>
+		<!-- Container of the box with data of incident -->
+		<div class="mx-auto incident_box w-50">
+			<!-- Data of the incident, displayed in table-like style -->
+		    <div class="row d-flex justify-content-center">
+				<div th:text="#{title.label}" class="col-sm-3">Title</div> 
+				<div class="col-sm-3" th:text="${incident.shortDescription}"></div>
+			</div>
+		    <div class="row d-flex justify-content-center">
+				<div th:text="#{description.label}" class="col-sm-3">Longer Description</div> 
+				<div class="col-sm-3" th:text="${incident.description}"></div>
+			</div>
+		    <div class="row d-flex justify-content-center">
+				<div th:text="#{contact.label}" class="col-sm-3">Contact person</div>
+				<div class="col-sm-3" th:text="${incident.contact}"></div>
+			</div>
+		    <div class="row d-flex justify-content-center">
+				 <div th:text="#{location.label}"class="col-sm-3"> Location of incident</div> 
+				 <div class="col-sm-3" th:text="${incident.location}"></div>
+			</div>
+		</div>
+		<!-- Delete button, that leads to a confirm modal -->
+		<div class="action-icon-container">
+			<button type="button" class="action-icon btn fa fa-trash" 
+					data-toggle="modal" data-target="#confirmDeleteModal">
+			</button>
+		</div>
+		<!-- Modal to confirm that the report should be deleted -->
+		<div th:replace="deletemodal"></div>
+	</body>
+</html>

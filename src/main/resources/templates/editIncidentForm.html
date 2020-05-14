@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <form class="" 
+        th:action="@{/incident/update/{id}(id=${incident.id})}" th:object="${incident}" 
+		method="POST">
+		
+		  <div class="form-group row">
+			<label th:text="#{title.label}" for="title" 
+			  class="control-label col-sm-3">Title</label>
+			<div class="col">
+				<input type="text"  id="title" class="form-control" 
+					th:placeholder="${incident.shortDescription}" th:field="*{shortDescription}"/> 
+			</div>
+		  </div>		  
+		  
+		  <div class="form-group row">	
+			<label th:text="#{description.label}" for="longerDescription" 
+			  class="control-label col-sm-3">Long Description</label>
+			<div class="col">
+			<textarea id="longerDescription" class="form-control" 
+				th:placeholder="${incident.description}" th:field="*{description}" /></textarea>
+		  	</div>
+		  </div>	
+		  
+		  <div class="form-group row">		
+			<label th:text="#{contact.label}" for="contact" 
+			  class="control-label col-sm-3">Contact</label> 
+			<div class="col">
+			<input type="text" id="contact" class="form-control" 
+				th:placeholder="${incident.contact}" th:field="*{contact}"/> 
+  			</div>
+		  </div>	
+		  
+		  <div class="form-group row">	
+			<label th:text="#{location.label}" for="location"
+  				class="control-label col-sm-3">Location</label>
+			<div class="col">
+			<input type="text" id="location" class="form-control"
+				th:placeholder="${incident.location}" th:field="*{location}"/> 
+			</div>
+		  </div>
+	  		
+		  <div class="form-group row">
+			<label th:text="#{priority.label}" for="priority" 
+			  class="control-label col-sm-3">Priority</label> 
+			<div class="col">
+			<select class="form-control" id="priority" th:field="*{priority}">
+				<option value="0">1 - do immediately</option>
+				<option value="1">2 - do in next 2 days</option>
+				<option value="2">3 - do in next week</option>
+			</select>
+			</div>
+		  </div>
+		  		  
+		  <div class="action-icon-container">	
+		  	<input type="submit" class="btn btn-success" 
+		  	  role="button" th:value="#{edit.incident.button}" />
+		  </div>
+  </form>
+ </html>
