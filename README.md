@@ -31,7 +31,7 @@ spring.datasource.password=changeme
 password of the MariaDB user to match the 
 4. `mvn compile`
 5. `mvn package`
-6. java -jar target/incidentdashboard.jar
+6. java -jar target/incidentdashboard-1.0.0-SNAPSHOT.jar
 
 
 ## Built with
