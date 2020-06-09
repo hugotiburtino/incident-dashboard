@@ -47,3 +47,7 @@ password of the MariaDB user to match the
 This project used as starter code the project DIKUKA that **Georg Kromer**, **Gergely Szalay** 
 and Hugo Tiburtino programmed in a Java bootcamp at AW Academy. 
 Special thanks to the teacher Oliver Hock.
+
+## License
+BSD 3
+
